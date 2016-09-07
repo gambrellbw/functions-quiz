@@ -22,4 +22,10 @@ def not_string(str):
  print not_string("not Bill")# Should return not Bill not
  print not_string(" Bill")# Should return not Bill
 
-  
+def icy_hot(a,b):
+	   if a <= 0 or b >= 100:
+		    return True
+		 else: return False
+ print icy_hot(21,151)# Should return True
+ print icy_hot(-21,70)# Should return True
+ print icy_hot(21,50)# Should return False
