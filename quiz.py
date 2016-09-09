@@ -15,12 +15,12 @@ print has_teen(4,4,12)#Should return False
 print has_teen(3,4,5)#Should return False
 
 def not_string(str):
-	if str[:1] == "not":
+	if str[:3] == "not":
 		 return str + "not"
 	else:
 		return "not" + str
 
-print not_string("not Bill")# Should return not Bill not
+print not_string("notBill")# Should return not Bill not
 print not_string("Bill")# Should return not Bill
 
 def icy_hot(a,b):
