@@ -24,8 +24,14 @@ print not_string("notBill")# Should return not Bill not
 print not_string("Bill")# Should return not Bill
 
 def icy_hot(a,b):
-	   if a <= 0 or b >= 100:
+	   if a > 100 and b >= 100:
+		  return False
+	   if a <= 0 and b <= 0:
+		  return False
+	   if a < 0 or b > 100:
 		    return True
+	   if b < 0 or a > 100:
+ 		    return True
 	   else:
 			 return False
 print icy_hot(21,151)# Should return True
@@ -33,14 +39,20 @@ print icy_hot(-21,70)# Should return True
 print icy_hot(21,50)# Should return False
 
 def closer_to(t,a,b):
-		if a == b:
-			 return 0
-		if a == t and b > t or b < t:
-			  return a
-		if b == t and a > t or a < t:
-			 return b
-		if b < a:
-			return
+	u = abs(t-a)
+	e = abs(t-b)
+
+	if a == b:
+		return 0
+	if a == t:
+		return a
+	if b == t:
+		return b
+	if e < u:
+		return b
+	if u < e:
+		return a
+
 print closer_to(21,20,9)#Should return 20
 print closer_to(7,20,9)#Should return 9
 print closer_to(21,9,9)#Should return 0
